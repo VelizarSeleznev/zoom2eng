@@ -15,7 +15,7 @@ class Gemini:
         response = self.model.generate_content(
             prompt,
             generation_config=generation_config,
-            # safety_settings=safety_settings
+            safety_settings=safety_settings
         )
 
         return response.text
@@ -49,5 +49,4 @@ class Gemini:
             HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
             HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-            HarmCategory.HARM_CATEGORY_UNSPECIFIED: HarmBlockThreshold.BLOCK_NONE,
         }
